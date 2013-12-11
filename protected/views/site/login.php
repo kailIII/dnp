@@ -8,46 +8,50 @@ $this->breadcrumbs=array(
 	'Login',
 );
 ?>
+<!-- form -->
 
-<h1>Login</h1>
+<div class="container">
+	<div class="text-center" >
 
-<p>Please fill out the following form with your login credentials:</p>
+		<div id="loginHeader">
+			<img src="images/img_login.jpg" alt="logo_cnc"  style="visibility:hidden" />
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
+			<p id="intro" >Lo invitamos a contestar esta encuesta, la cual es una manera de opinar de forma confidencial y así dar a conocer su percepción y punto de vista de los servicios, procesos y áreas de Ecopetrol. </p>
+		</div>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
 	</div>
+      <!-- <form class="form-signin form-horizontal" method="POST" action="" > -->
+      <?php $form=$this->beginWidget('CActiveForm', array(
+      		'id'=>'login-form',
+      		'enableClientValidation'=>true,
+      			'clientOptions'=>array(
+      			'validateOnSubmit'=>true,
+      		),
+      		'htmlOptions' => array('class' => 'form-signin'),
+      )); ?>
+        <h2 class="form-signin-heading">Iniciar sesión</h2>
+        <div class="form-group">
+          <?php echo $form->labelEx($model,'username'); ?>
+          <?php echo $form->textField($model,'username', array('class' => 'form-control')); ?>
+          <?php echo $form->error($model,'username', array('class' => 'text-danger') ); ?>
+        </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
+        <div class="form-group">
+          <?php echo $form->labelEx($model,'password'); ?>
+          <?php echo $form->passwordField($model,'password', array('class' => 'form-control')); ?>
+		  <?php echo $form->error($model,'password', array('class' => 'text-danger')); ?>
+        </div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
+		<div class="text-danger"></div>
+        <button class="btn btn-md btn-primary btn-block" type="submit">Entrar</button>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
-	</div>
 
-<?php $this->endWidget(); ?>
-</div><!-- form -->
+      <?php $this->endWidget(); ?>
+
+      <div class="warning-text" >
+         <p class="text-center" >
+          <i>Por favor si tiene alguna dificultad comuníquese con el Centro Nacional de Consultoría 339 4888 en Bogotá, con la extensión 2215 o si lo prefiere envíe un correo a mmera@cnccol.com</i>
+        </p>
+      </div>
+
+    </div>
