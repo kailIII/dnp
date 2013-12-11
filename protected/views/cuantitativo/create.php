@@ -21,8 +21,6 @@ $this->menu=array(
 
 <div class="container">
 	<form id="cuantitativo-form" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php/cuantitativo/create" method="post">
-		<input type="hidden" name="Cuantitativo[id_con]" value="<?php echo Yii::app()->user->id ?>">
-		<input type="hidden" name="Cuantitativo[cod_empleado]" value="<?php echo $usuario->username; ?>" >
 
 		<div class="jumbotron text-center">PRESENTACIÓN</div>
 		<table class="table table-striped">

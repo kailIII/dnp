@@ -4,9 +4,7 @@
  * This is the model class for table "cuantitativo".
  *
  * The followings are the available columns in table 'cuantitativo':
- * @property integer $id_con
- * @property string $cod_empleado
- * @property string $nom_contacto
+ * @property integer $id
  * @property string $fecha_encuesta
  * @property string $p1
  * @property string $p2
@@ -85,14 +83,12 @@ class Cuantitativo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_con', 'required'),
-			array('id_con', 'numerical', 'integerOnly'=>true),
-			array('cod_empleado, nom_contacto, p56', 'length', 'max'=>255),
 			array('p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p14, p15, p16, p17, p18, p19, p20, p21, p22, p24, p25, p26, p27, p28, p29, p30, p31, p32, p34, p35, p36, p37, p38, p39, p40, p41, p43, p44, p45, p46, p47, p49, p50, p51, p52, p53, p54, p57, p58', 'length', 'max'=>45),
+			array('p56', 'length', 'max'=>255),
 			array('p13, p23, p33, p42, p48, p55', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_con, cod_empleado, nom_contacto, fecha_encuesta, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56, p57, p58', 'safe', 'on'=>'search'),
+			array('id, fecha_encuesta, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54, p55, p56, p57, p58', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -113,9 +109,7 @@ class Cuantitativo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_con' => 'Id Con',
-			'cod_empleado' => 'Cod Empleado',
-			'nom_contacto' => 'Nom Contacto',
+			'id' => 'ID',
 			'fecha_encuesta' => 'Fecha Encuesta',
 			'p1' => 'P1',
 			'p2' => 'P2',
@@ -196,9 +190,7 @@ class Cuantitativo extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_con',$this->id_con);
-		$criteria->compare('cod_empleado',$this->cod_empleado,true);
-		$criteria->compare('nom_contacto',$this->nom_contacto,true);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('fecha_encuesta',$this->fecha_encuesta,true);
 		$criteria->compare('p1',$this->p1,true);
 		$criteria->compare('p2',$this->p2,true);

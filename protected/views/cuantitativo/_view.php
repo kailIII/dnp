@@ -5,16 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_con')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id_con), array('view', 'id'=>$data->id_con)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('cod_empleado')); ?>:</b>
-	<?php echo CHtml::encode($data->cod_empleado); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nom_contacto')); ?>:</b>
-	<?php echo CHtml::encode($data->nom_contacto); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha_encuesta')); ?>:</b>
@@ -33,7 +25,6 @@
 	<?php echo CHtml::encode($data->p3); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('p4')); ?>:</b>
 	<?php echo CHtml::encode($data->p4); ?>
 	<br />
@@ -42,6 +33,7 @@
 	<?php echo CHtml::encode($data->p5); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('p6')); ?>:</b>
 	<?php echo CHtml::encode($data->p6); ?>
 	<br />

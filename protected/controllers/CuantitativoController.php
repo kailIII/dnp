@@ -33,7 +33,7 @@ class CuantitativoController extends Controller
 			),
 			array('allow',
 				'actions'=>array('create'),
-				'roles'=>array('Contacto'),
+				'users'=>array('*'),
 			),
 			array('allow',
 				'actions'=>array('admin','delete','update','create'),
@@ -62,13 +62,6 @@ class CuantitativoController extends Controller
 	 */
 	public function actionCreate()
 	{
-		// aplica logica formulario si ya se ha respondido cuantitativo
-		if( Contacto::model()->hizoCuantitativo( Yii::app()->user->id ) === true ){
-
-			 Contacto::model()->logicaFormulario( Yii::app()->user->id );
-
-		}
-
 		$model=new Cuantitativo;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -78,14 +71,12 @@ class CuantitativoController extends Controller
 		{
 			$model->attributes=$_POST['Cuantitativo'];
 			if($model->save())
-				Contacto::model()->logicaFormulario( Yii::app()->user->id );
+				$this->redirect( array('agradecimiento/') );
 				// $this->redirect(array('view','id'=>$model->id_con));
 		}
 
 		$this->layout 		= 'encuesta';
 		$this->pageTitle 	= 'DNP - Cuantitativo';
-
-		$usuario 			= User::model()->findByPk( Yii::app()->user->id );
 
 		$this->render('create',array(
 			'model'			=>	$model,

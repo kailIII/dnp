@@ -93,29 +93,9 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login()){
 
-				$Rights = new Rights;
-				$rol 	= $Rights->getAssignedRoles( Yii::app()->user->id );
-				// $rol 	= $rol[0];
-				reset($rol);
-				$rol = key($rol);
-
-				// si es Rol contacto
-				if( $rol == 'Contacto' ){
-
-					// aplica la logica de formulario
-					Contacto::model()->logicaFormulario( Yii::app()->user->id );
-
-					return;
-
-				}
-
 				$this->redirect(Yii::app()->user->returnUrl);
 			}
 		}
-
-
-		$this->layout 		= 'login';
-		$this->pageTitle 	= 'DNP - Iniciar sesión';
 
 		// display the login form
 		$this->render('login',array('model'=>$model));

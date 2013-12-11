@@ -20,24 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_con'); ?>
-		<?php echo $form->textField($model,'id_con'); ?>
-		<?php echo $form->error($model,'id_con'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'cod_empleado'); ?>
-		<?php echo $form->textField($model,'cod_empleado',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'cod_empleado'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'nom_contacto'); ?>
-		<?php echo $form->textField($model,'nom_contacto',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'nom_contacto'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'fecha_encuesta'); ?>
 		<?php echo $form->textField($model,'fecha_encuesta'); ?>
 		<?php echo $form->error($model,'fecha_encuesta'); ?>
