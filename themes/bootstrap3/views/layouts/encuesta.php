@@ -33,6 +33,14 @@
 			padding-top: 71px;
 			padding-right: 35px;
 		}
+		.jumbotron{
+			margin-top: 100px;
+			font-style: italic;
+			font-weight: bold;
+		}
+		.jumbotron.first{
+			margin-top: 20px;
+		}
 	</style>
 
 </head>

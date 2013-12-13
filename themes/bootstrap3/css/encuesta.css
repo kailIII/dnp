@@ -57,3 +57,7 @@ input[type=text]{
 label{
 	font-weight: normal;
 }
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	background-color: #F3F3F3;
+}

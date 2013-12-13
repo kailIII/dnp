@@ -22,20 +22,12 @@ $this->menu=array(
 <div class="container">
 	<form id="cuantitativo-form" action="<?php echo Yii::app()->request->baseUrl; ?>/index.php/cuantitativo/create" method="post">
 
-		<div class="jumbotron text-center">PRESENTACIÓN</div>
-		<table class="table table-striped">
-			<tbody><tr>
-				<td><b>&nbsp;</b></td>
-				<td colspan="100" ><b>Entender el nivel de planeación de actividades y la cultura interna dentro de las entidades con relación a los programas de retroalimentación de servicio al ciudadano también llamados estudios de satisfacción de servicio al ciudadano dentro de las entidades adscritas al Programa Nacional de Servicio al Ciudadano del DNP.</b></td>
+			<p><b>El objetivo de esta encuesta es:</b></p>
+			<p>Entender el nivel de planeación de actividades y la cultura interna dentro de las entidades con relación a los programas de retroalimentación de servicio al ciudadano también llamados estudios de satisfacción de servicio al ciudadano dentro de las entidades pertenecientes al estudio sistema Nacional de Servicio al Ciudadano.
+			</p>
+			<p>Los resultados harán parte de un informe de “Evaluación de la Gestión de Programas de Satisfacción al Ciudadano” que se entregará a las entidades que participen.</p>
 
-			</tr>
-			<tr>
-				<td><b>&nbsp;</b></td>
-				<td colspan="100" ><b>Los resultados harán parte de un informe de “Evaluación de la Gestión de Programas de Satisfacción al Ciudadano” que se entregará a las entidades que participen. </b></td>
-
-			</tr>
-		</tbody></table>
-		<div class="jumbotron text-center">Comunicación</div>
+		<div class="jumbotron first text-center">Comunicación</div>
 		<table class="table table-striped">
 			<tbody><tr>
 				<td><b>&nbsp;</b></td>
@@ -876,46 +868,30 @@ $this->menu=array(
 			<tr>
 				<td>&nbsp;</td>
 				<td>¿Podría indicar su rol dentro de la entidad? </td>
+				<td>
+				<select name="Cuantitativo[p57]" class="form-control" >
+					<option value="99">Selecione...</option>
+					<option value="1">Estratégico (Directivo o Director)</option>
+					<option value="2">Táctico (Gestiona un área o proceso)</option>
+					<option value="3">Operativo (No tiene persona a su cargo)</option>
+				</select>
+				</td>
 			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Estratégico (Directivo o Director)</td>
-				<td class="text-center"><input type="radio" value="1" name="Cuantitativo[p57]"></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Táctico (Gestiona un área o proceso)</td>
-				<td class="text-center"><input type="radio" value="2" name="Cuantitativo[p57]"></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Operativo (No tiene persona a su cargo)</td>
-				<td class="text-center"><input type="radio" value="3" name="Cuantitativo[p57]"></td>
-			</tr>
+
 			<tr>
 				<td>&nbsp;</td>
 				<td>¿Su responsabilidad está relacionada con qué área en la entidad? </td>
+				<td>
+					<select name="Cuantitativo[p58]"  class="form-control">
+						<option value="99">Selecione...</option>
+						<option value="1">Atención o relacionada con servicio al ciudadano</option>
+						<option value="2">Corporativo o Planeación </option>
+						<option value="3">Encargados de servicios de soporte o administrativos (servicios generales, cuentas por pagar, tesorería, cartera, recursos humanos, etc.)</option>
+						<option value="4">Áreas misionales o procesos relacionados con el objeto de la entidad</option>
+					</select>
+				</td>
 			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Atención o relacionada con servicio al ciudadano</td>
-				<td class="text-center"><input type="radio" value="1" name="Cuantitativo[p58]"></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Corporativo o Planeación </td>
-				<td class="text-center"><input type="radio" value="2" name="Cuantitativo[p58]"></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Encargados de servicios de soporte o administrativos (servicios generales, cuentas por pagar, tesorería, cartera, recursos humanos, etc.)</td>
-				<td class="text-center"><input type="radio" value="3" name="Cuantitativo[p58]"></td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td>Áreas misionales o procesos relacionados con el objeto de la entidad</td>
-				<td class="text-center"><input type="radio" value="4" name="Cuantitativo[p58]"></td>
-			</tr>
+
 			<tr>
 				<td><b>&nbsp;</b></td>
 				<td colspan="100" class="text-center" ><b>Nuevamente quiero agradecerle su colaboración a nombre del Centro Nacional de Consultoría. </b></td>
